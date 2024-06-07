@@ -15,18 +15,34 @@ export default function Textform(props) {
 
   const LowClick = () => {
    
-    let newText = text.toLocaleLowerCase();
+    let newText = text.toLowerCase();
     settext(newText);
   };
 
+    const handleClear = ()=>{
+
+        settext("");       
+
+    };
   
   const [text, settext] = useState("");
 
   const [isBlue , setBlue] = useState(false);
 
+    const [Btntxt , setBtn] = useState("blue");
+  
   const togglecolour = ()=>{
 
+    
     setBlue(!isBlue);
+    //setBtn("black");
+
+        isBlue ? setBtn("blue") : setBtn("red");
+  };
+
+  const email = ()=>{
+
+    settext(text.split(" "))
 
   };
 
@@ -52,7 +68,8 @@ export default function Textform(props) {
         <button className="btn btn-primary" onClick={UpClick}>
           Convert to UpperCase
         </button>
-      </div>
+      </div>      
+
 
       <div className="Btn">
         <button className="btn btn-primary" onClick={LowClick}>
@@ -62,7 +79,19 @@ export default function Textform(props) {
 
       <div className="Btn">
       <button className="btn btn-primary" onClick={togglecolour}>
-        toggle color in Black & Blue
+        {Btntxt}
+      </button>
+    </div>
+
+    <div className="Btn">
+      <button className="btn btn-primary" onClick={handleClear}>
+        clear text
+      </button>
+    </div>
+
+    <div className="Btn">
+      <button className="btn btn-primary" onClick={email}>
+       validate email
       </button>
     </div>
 
@@ -71,6 +100,7 @@ export default function Textform(props) {
     <h1>Text Summary</h1>
     <p>{text.split(" ").length-1} words and {text.length} charactors</p>
     
+   
     </div>
 
 
