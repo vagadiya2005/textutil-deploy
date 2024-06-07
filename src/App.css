@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 } */
+
+.Btn{
+  margin: 8px;
+  padding: 8px;
+}
+
+.blue-txt{
+  color:blue;
+}
+
+.red-txt{
+  color:black;
+}

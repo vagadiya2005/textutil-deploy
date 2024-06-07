@@ -55,6 +55,7 @@ export default function Navbar(props) {
 
 Navbar.defaultProps ={
 
-title: "homeeee"
+title: "homeeee",
+abouttext: "link"
 
 };
