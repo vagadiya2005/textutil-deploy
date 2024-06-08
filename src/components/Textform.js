@@ -26,9 +26,7 @@ export default function Textform(props) {
     copytext.select();
     navigator.clipboard.writeText(copytext.value);
 
-
-
-  }
+  };
 
     const handleClear = ()=>{
 
