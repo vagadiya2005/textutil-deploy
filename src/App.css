@@ -37,6 +37,10 @@
   }
 } */
 
+.buttons{
+  display: flex;
+}
+
 .Btn{
   margin: 8px;
   padding: 8px;
@@ -49,4 +53,17 @@
 
 .red-txt{
   color:red;
+}
+
+.navbar-dark{
+
+background-color: rgb(41 38 38 / 94%);
+color: white;
+
+}
+
+.navbar-ligth{
+
+background-color: white;
+color: black;
 }
