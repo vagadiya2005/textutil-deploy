@@ -6,12 +6,6 @@ import Textform from './components/Textform';
 import About from './components/About';
 import Alert from './components/Alert';
 import React ,{useState} from 'react'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
 
 
 
@@ -58,7 +52,7 @@ function App()  {
   return (
    <>
 
-   <Router>
+   
    
  <Navbar homesection="home2" abouttext="jdjf" mode={mode} webmode={togglemode}></Navbar>
 
@@ -66,17 +60,16 @@ function App()  {
 
 <div className='container'>
  
-<Routes>
-<Route exact path='/about' element={<About></About>}/>
-<Route exact path="/" element={<Textform title="TextUtils" showAlert={showAlert} aboutform="Enter your text" mode={mode}></Textform>}/>
+
+
+<Textform title="TextUtils" showAlert={showAlert} aboutform="Enter your text" mode={mode}/>
 
 
 
-</Routes>
+
 
 </div>
 
-</Router>
 
    
    </>
