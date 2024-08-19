@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import { Link } from 'react-router-dom';
 
 //import React, { Component } from 'react'
 
@@ -18,7 +18,7 @@ export default function Navbar(props) {
     <div>
 
     
-   <nav className={`navbar navbar-expand-lg navbar-${props.mode}`}>
+   <nav className={`navbar navbar-expand-lg navbar-${props.mode}`} >
    <div className="container-fluid">
      <a className="navbar-brand" href="/">{props.title}</a>
      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@ export default function Navbar(props) {
      <div className="collapse navbar-collapse" id="navbarSupportedContent">
        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
          <li className="nav-item">  
-           <a className="nav-link active" aria-current="page" href="#">{props.homesection}</a>
+           <Link className="nav-link active" aria-current="page" to="/">{props.homesection}</Link>
          </li>
          <li className="nav-item">
           
@@ -37,12 +37,12 @@ export default function Navbar(props) {
            
          </li>
          <li className="nav-item">
-           <a className="nav-link" href="#">{props.abouttext}</a>
+           <Link className="nav-link" to="/about">{props.abouttext}</Link>
          </li>
        </ul>
        <div class="form-check form-switch">
-       <input className="form-check-input text-line" onClick={props.webmode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-       <label className="form-check-label" for="flexSwitchCheckDefault">Enable Dark Mode</label>
+       <input className="form-check-input text-line" onClick={props.webmode} style={{cursor:'pointer'}} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+       <label className="form-check-label" cursor='pointer' for="flexSwitchCheckDefault" style={{cursor:'pointer'}}>Enable Dark Mode</label>
      </div>
      </div>
    </div>
@@ -62,7 +62,7 @@ export default function Navbar(props) {
 
 Navbar.defaultProps ={
 
-title: "homeeee",
+title: "TextUtils",
 abouttext: "link"
 
 };

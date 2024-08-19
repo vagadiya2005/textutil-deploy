@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/textutil-deploy/static/css/main.aca64bf6.css",
+    "main.js": "/textutil-deploy/static/js/main.a1a08b40.js",
+    "static/js/534.ee39fe72.chunk.js": "/textutil-deploy/static/js/534.ee39fe72.chunk.js",
+    "static/media/logo.svg": "/textutil-deploy/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/textutil-deploy/index.html",
+    "main.aca64bf6.css.map": "/textutil-deploy/static/css/main.aca64bf6.css.map",
+    "main.a1a08b40.js.map": "/textutil-deploy/static/js/main.a1a08b40.js.map",
+    "534.ee39fe72.chunk.js.map": "/textutil-deploy/static/js/534.ee39fe72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aca64bf6.css",
+    "static/js/main.a1a08b40.js"
+  ]
+}

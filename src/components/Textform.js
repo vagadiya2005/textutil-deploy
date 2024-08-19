@@ -32,6 +32,7 @@ export default function Textform(props) {
     let copytext = document.getElementById("myBox");
     copytext.select();
     navigator.clipboard.writeText(copytext.value);
+    document.getSelection().removeAllRanges();
     props.showAlert("Text copy to clipboard!","Success");
 
   };
@@ -90,28 +91,28 @@ function countWords(text) {
     <div className="buttons">
     
     <div className="Btn">
-    <button className="btn btn-primary" onClick={UpClick}>
-      UpperCase
+    <button className="btn btn-primary" onClick={UpClick} disabled={text === ""}>
+      Convert to UpperCase
     </button>
   </div>      
 
 
   <div className="Btn">
-    <button className="btn btn-primary" onClick={LowClick}>
+    <button className="btn btn-primary" onClick={LowClick} disabled={text === ""}>
       Convert to LowerCase
     </button>
   </div>
 
   
   <div className="Btn">
-  <button className="btn btn-primary" onClick={handleCopy}>
+  <button className="btn btn-primary" onClick={handleCopy} disabled={text === ""}>
     Copy Text
   </button>
 </div>
 
 
 <div className="Btn">
-  <button className="btn btn-primary" onClick={handleClear}>
+  <button className="btn btn-primary" onClick={handleClear} disabled={text === ""}>
     clear text
   </button>
 </div>
